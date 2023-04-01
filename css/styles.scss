@@ -1,0 +1,229 @@
+/* Author: Arash Hojjat */
+@import url("normalize.css");
+
+$primary_color: #ff7900;
+$secondary_color: #1d33a3;
+
+html {
+    font-family: Open Sans,sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000;
+    background-color: #f4f4f4;
+}
+
+#wrapper{ 
+    background-color: #303030;
+	display:flex;
+	flex-direction:column;
+	min-height:100vh;
+}
+
+#inner_container{
+    max-width: 80%;
+    margin: auto;
+	flex:1;
+	display:flex;
+	flex-direction: column;
+}
+
+.container {
+    flex:1;
+	display:flex;
+    justify-content: center;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+    padding: 0 16px;
+}
+
+header {
+    background-color: $primary_color;
+}
+
+header a{
+    text-decoration: none;
+}
+
+h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+main {
+    font-family: 'Lemonada', cursive;
+    background-color: #ffffff;
+    min-width: 1000px;
+    margin: 10px 0 10px 0;
+    padding: 16px;
+    flex: 1;
+    justify-content: center;
+}
+
+h2 {
+    padding: 0;
+    color: $secondary_color;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 16px 0;
+    text-transform: uppercase;
+    max-width: 1000px;
+    border-bottom: solid 2px $primary_color;
+}
+
+h3 {
+    color: $primary_color;
+    font-size: 25px;
+}
+
+#play-field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.player-box {
+    border: solid 3px $secondary_color;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 30%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.dice {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dice-image {
+    justify-self: center;
+    margin: 20px;
+    max-width: 20%;
+}
+
+#buttons {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    left: 50%;  
+}
+
+footer {
+    background-color: $primary_color;
+}
+
+small {
+    margin: 30px 0;
+}
+
+.warning-no-script{
+    border: solid 3px rgb(128, 0, 0);
+    background-color: rgb(215, 136, 136);
+    padding-left: 5px;
+    border-radius: 10px;
+}
+
+#pop-up {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    left:50%;
+	top:50%;
+    transform:translate(-50%, -50%);
+    font-family: 'Lemonada', cursive;
+    font-size: 16px;
+    color: white;
+    background-color: $secondary_color;
+    border: solid 2px $primary_color;
+    border-radius: 10px;
+    max-width:1000px;
+	min-width:300px;
+    padding: 10px;
+}
+
+#close-pop-up {
+    color: $primary_color;
+    border: solid 2px $primary_color;
+    border-radius: 3px;
+    position: absolute;  
+    font-weight: bold;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    cursor:pointer;
+}
+
+#close-pop-up:hover {
+    color: $secondary_color;
+    border: solid 2px $primary_color;
+    background-color: $primary_color;
+}
+
+button {
+    background-color: $secondary_color;
+    text-decoration: none;
+    color: white;
+    border-color: $primary_color;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px 3px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: $secondary_color;
+    border-color: $secondary_color;
+    color: $primary_color;
+}
+
+button:active {
+    background-color: $primary_color;
+    border-color: $secondary_color;
+    color: $secondary_color;
+}
+
+@media (min-width:300px){
+    html{ 
+		font-size:11px;
+	}
+
+    h2{
+        font-size: 15px;
+    }
+
+    h3{
+        font-size: 13px;
+    }
+
+    #output-part3 h3 {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1024px) {
+	html{ 
+		font-size:16px;
+	}
+
+    h2{
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    #output-part3 h3 {
+        font-size: 18px;
+    }
+}

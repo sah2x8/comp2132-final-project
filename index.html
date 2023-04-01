@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<!-- Author: Arash Hojjat -->
+	<head>
+		<title>COMP2132: Final Project</title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">  
+
+        <script src="scripts/jquery-3.6.3.min.js" defer></script>
+        <script src="scripts/data.js" defer="defer"></script>
+        <script src="scripts/Die.js" defer="defer"></script>
+        <script src="scripts/Player.js" defer="defer"></script>
+        <script src="scripts/dice-game.js" defer="defer"></script>
+	</head>
+    
+	<body>
+        <div id="wrapper">
+            <noscript>
+                <div class="warning warning-no-script"> 
+                    <p>Oh no! It's definitely time to panic...</p>
+                    <h2>JavaScript Is Disabled!</h2>
+                    <p>This page requires JavaScript to run.</p>
+                    <p>Please <a href="https://www.enable-javascript.com/">enable JavaScript</a> in your browser then refresh this page.</p>				
+                </div>
+            </noscript>
+
+            <header>
+                <a href="index.html">
+                    <div class="container">
+                    <h1>Dice Game</h1>
+                    </div>
+                </a>
+            </header>
+            
+            <div id="inner_container">
+                <main>
+                    <div id="play-field"></div>
+
+                    <div id="buttons">
+                        <button type="button" id="roll-dice">Roll Dice</button>
+                        <button type="button" id="new-game">New Game</button>
+                        <button type="button" id="how-to-play">How to Play</button>
+                    </div>
+
+                    <aside id="pop-up">
+            
+                        <h3>How to Play:</h3>
+                        <a id="close-pop-up">X</a>
+                        <ul>
+                            <li>To start, click the "Roll Dice" button.</li>
+                            <li>To advance to the next round, click the "Roll Dice" button again.</li>
+                            <li>After three rounds, the game is over and the final score is calculated.</li>
+                            <li>If you want to play again, click the "New Game" button or refresh the page.</li>
+                        </ul>
+
+                        <h3>Rules:</h3>
+                        <ul>
+                            <li>Each round, you and the computer both rolls a pair of dice.</li>
+                            <li>Your score for that round will be based on the sum of the dice.</li>
+                            <li>If you roll doubles then your score is multiplied by 2.</li>
+                            <li>Rolling a 1 will give you a score of 0 for that round.</li>
+                            <li>The player with most points at the end of three rounds wins the game.</li>
+                        </ul>
+                        
+                    </aside>
+                </main>
+            </div>
+
+            
+            
+            <footer>
+                <div class="container">
+                    <small>&copy; 2023 Arash Hojjat - COMP2132</small>
+                </div>
+            </footer>
+        </div>
+	</body>
+</html>
